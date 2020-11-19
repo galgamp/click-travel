@@ -28,7 +28,7 @@ export default {
     await store.dispatch('destination/fetchAllDestinations')
   },
   computed: mapGetters({
-    destinations: 'destination/getAll',
+    destinations: 'destination/getDreamDestinations',
   }),
 }
 </script>
