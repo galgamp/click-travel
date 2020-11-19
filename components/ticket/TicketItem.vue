@@ -1,7 +1,11 @@
 <template>
   <div>
     <ul>
-      <li v-for="(value, name, index) in ticket" :key="index">
+      <li
+        v-for="(value, name, index) in ticket"
+        :key="index"
+        @click="displayTicket()"
+      >
         {{ name }} -> {{ value }}
       </li>
     </ul>
@@ -16,6 +20,12 @@ export default {
       type: Object,
       default: null,
       required: true,
+    },
+  },
+  methods: {
+    displayTicket() {
+      this.$store.dispatch('ticket/setSelected', this.ticket)
+      this.$router.push({ path: '/tickets/selected' })
     },
   },
 }

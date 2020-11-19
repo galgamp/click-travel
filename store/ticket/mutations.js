@@ -6,4 +6,7 @@ export default {
   setLoading({ loading }, value) {
     loading = value
   },
+  setSelected({ selected }, ticket) {
+    Object.assign(selected, ticket)
+  },
 }

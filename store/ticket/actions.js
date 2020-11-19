@@ -12,4 +12,7 @@ export default {
       commit('setLoading', false)
     }
   },
+  setSelected({ commit }, ticket) {
+    commit('setSelected', ticket)
+  },
 }
