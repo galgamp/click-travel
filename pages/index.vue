@@ -7,14 +7,14 @@
       <div>
         <h1 class="title">Choose your dream destination...</h1>
         <div class="links">
-          <a
+          <NuxtLink
             v-for="(destination, index) in destinations"
             :key="index"
-            href="#"
+            :to="`destinations/${destination.code}`"
             class="giant-button"
           >
             {{ destination.name }}
-          </a>
+          </NuxtLink>
         </div>
       </div>
     </div>
